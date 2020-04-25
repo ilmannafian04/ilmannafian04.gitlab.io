@@ -1,3 +1,3 @@
 # Canis
 
-Personal website
+Personal portofolio

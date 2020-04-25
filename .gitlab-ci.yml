@@ -16,8 +16,6 @@ dep:
     expire_in: 1 hour
     paths:
       - node_modules/
-  only:
-    - master
 
 test:
   image: node:alpine
