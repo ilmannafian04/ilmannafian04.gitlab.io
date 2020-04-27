@@ -28,7 +28,7 @@ const Intro: FunctionComponent = () => {
     return (
         <Box display="flex" justifyContent="center" alignItems="center" className={classes.introContainer}>
             <Typography variant="h2">
-                Hello, names
+                Hello, name&apos;s
                 <br />
                 Ilman
             </Typography>

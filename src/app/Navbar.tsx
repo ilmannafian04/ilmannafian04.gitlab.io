@@ -4,10 +4,10 @@ import AppBar from '@material-ui/core/AppBar';
 import IconButton from '@material-ui/core/IconButton';
 import Snackbar from '@material-ui/core/Snackbar';
 import makeStyles from '@material-ui/core/styles/makeStyles';
-import Typography from '@material-ui/core/Typography';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import Discord from 'mdi-material-ui/Discord';
+import Dog from 'mdi-material-ui/Dog';
 import Gitlab from 'mdi-material-ui/Gitlab';
 import Steam from 'mdi-material-ui/Steam';
 
@@ -56,7 +56,7 @@ const Navbar: FunctionComponent = () => {
     return (
         <AppBar className={classes.navbarBackground}>
             <Toolbar>
-                <Typography variant="h6">Ilman</Typography>
+                <Dog fontSize="large" />
                 <div className={classes.grow} />
                 <IconButton className={classes.navIcon} href="https://gitlab.com/ilmannafian04" target="_blank">
                     <Gitlab />
