@@ -6,6 +6,6 @@ describe('<Navbar />', () => {
     it('render without error', () => {
         expect.hasAssertions();
         const wrapper = shallow(<Navbar />);
-        expect(wrapper.text()).toContain('Ilman');
+        expect(wrapper.debug()).toContain('discord');
     });
 });
