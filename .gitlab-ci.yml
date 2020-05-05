@@ -1,6 +1,5 @@
 stages:
   - dep
-  - test
   - deploy
 
 dep:
@@ -16,19 +15,6 @@ dep:
     expire_in: 1 hour
     paths:
       - node_modules/
-
-test:
-  image: node:alpine
-  stage: test
-  script:
-    - npm run test -- --coverage
-  coverage: /All\sfiles.*?\s+(\d+.\d+)/
-
-lint:
-  image: node:alpine
-  stage: test
-  script:
-    - npm run lint
 
 pages:
   image: node:alpine
