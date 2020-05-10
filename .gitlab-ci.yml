@@ -15,6 +15,8 @@ dep:
     expire_in: 1 hour
     paths:
       - node_modules/
+  only:
+    - master
 
 pages:
   image: node:alpine
