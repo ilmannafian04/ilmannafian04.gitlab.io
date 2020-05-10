@@ -3,6 +3,7 @@ import Container from '@material-ui/core/Container';
 
 import Intro from './Intro';
 import Navbar from './Navbar';
+import Skill from './Skill';
 
 const App: FunctionComponent = () => {
     return (
@@ -10,6 +11,7 @@ const App: FunctionComponent = () => {
             <Navbar />
             <Container>
                 <Intro />
+                <Skill />
             </Container>
         </>
     );
