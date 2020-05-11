@@ -56,7 +56,7 @@ const SkillSection: FunctionComponent<SkillSectionProps> = (props: SkillSectionP
                         <Box key={index}>
                             {skillList.map((skill, index1) => {
                                 return (
-                                    <ListItem key={index1}>
+                                    <ListItem key={`${index}-${index1}`}>
                                         <ListItemText primary={skill} />
                                     </ListItem>
                                 );
