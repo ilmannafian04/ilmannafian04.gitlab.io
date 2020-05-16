@@ -21,6 +21,8 @@ dep:
 pages:
   image: node:alpine
   stage: deploy
+  variables:
+    GENERATE_SOURCEMAP: "false"
   script:
     - npm run build
     - rm -rf public
