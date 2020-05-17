@@ -1,5 +1,7 @@
+import { ApolloProvider } from '@apollo/react-hooks';
 import { CssBaseline } from '@material-ui/core';
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
+import ApolloClient from 'apollo-boost';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import 'typeface-roboto';
@@ -14,12 +16,18 @@ const theme = createMuiTheme({
     },
 });
 
+const client = new ApolloClient({
+    uri: 'https://ilmannafian04.herokuapp.com/graphql',
+});
+
 ReactDOM.render(
     <React.StrictMode>
-        <ThemeProvider theme={theme}>
-            <CssBaseline />
-            <App />
-        </ThemeProvider>
+        <ApolloProvider client={client}>
+            <ThemeProvider theme={theme}>
+                <CssBaseline />
+                <App />
+            </ThemeProvider>
+        </ApolloProvider>
     </React.StrictMode>,
     document.getElementById('root'),
 );
