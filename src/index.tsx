@@ -4,6 +4,7 @@ import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 import ApolloClient from 'apollo-boost';
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { HashRouter } from 'react-router-dom';
 import 'typeface-roboto';
 
 import App from './app/App';
@@ -24,8 +25,10 @@ ReactDOM.render(
     <React.StrictMode>
         <ApolloProvider client={client}>
             <ThemeProvider theme={theme}>
-                <CssBaseline />
-                <App />
+                <HashRouter>
+                    <CssBaseline />
+                    <App />
+                </HashRouter>
             </ThemeProvider>
         </ApolloProvider>
     </React.StrictMode>,
