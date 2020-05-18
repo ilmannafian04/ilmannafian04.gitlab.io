@@ -31,19 +31,11 @@ const Admin: FunctionComponent = () => {
     const [loggedIn, setLoggedIn] = useState<boolean>(false);
     const handleFormChange = (event: ChangeEvent<HTMLInputElement>): void => {
         const target = event.target;
-        if (target.name === 'username') {
-            setLoginFormState(
-                update(loginFormState, {
-                    username: { $set: target.value },
-                }),
-            );
-        } else if (target.name === 'password') {
-            setLoginFormState(
-                update(loginFormState, {
-                    password: { $set: target.value },
-                }),
-            );
-        }
+        setLoginFormState(
+            update(loginFormState, {
+                [target.name]: { $set: target.value },
+            }),
+        );
     };
     const handleFormSubmit = (event: FormEvent<HTMLFormElement>): void => {
         event.preventDefault();
