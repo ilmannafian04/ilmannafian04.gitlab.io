@@ -1,10 +1,12 @@
-import React, { FunctionComponent } from 'react';
+import Box from '@material-ui/core/Box';
 import Container from '@material-ui/core/Container';
+import React, { FunctionComponent } from 'react';
+import { Route, Switch } from 'react-router-dom';
 
+import Admin from './admin/Admin';
 import Intro from './Intro';
 import Navbar from './Navbar';
 import Skill from './Skill';
-import { Box } from '@material-ui/core';
 
 const App: FunctionComponent = () => {
     return (
@@ -12,8 +14,17 @@ const App: FunctionComponent = () => {
             <Navbar />
             <Box pb={2}>
                 <Container>
-                    <Intro />
-                    <Skill />
+                    <Switch>
+                        <Route path="/lol">
+                            <Box pt={8}>
+                                <Admin />
+                            </Box>
+                        </Route>
+                        <Route path="/">
+                            <Intro />
+                            <Skill />
+                        </Route>
+                    </Switch>
                 </Container>
             </Box>
         </>

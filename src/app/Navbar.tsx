@@ -1,4 +1,3 @@
-import React, { FunctionComponent, MutableRefObject, ReactElement, useRef, useState } from 'react';
 import { createStyles, Theme, Toolbar } from '@material-ui/core';
 import AppBar from '@material-ui/core/AppBar';
 import IconButton from '@material-ui/core/IconButton';
@@ -12,6 +11,7 @@ import Discord from 'mdi-material-ui/Discord';
 import Dog from 'mdi-material-ui/Dog';
 import Gitlab from 'mdi-material-ui/Gitlab';
 import Steam from 'mdi-material-ui/Steam';
+import React, { FunctionComponent, MutableRefObject, ReactElement, useRef, useState } from 'react';
 
 interface HideOnScrollProps {
     children: ReactElement;
