@@ -15,12 +15,12 @@ const App: FunctionComponent = () => {
             <Box pb={2}>
                 <Container>
                     <Switch>
+                        <Route path="/lol">
+                            <Admin />
+                        </Route>
                         <Route path="/">
                             <Intro />
                             <Skill />
-                        </Route>
-                        <Route path="/lol">
-                            <Admin />
                         </Route>
                     </Switch>
                 </Container>
