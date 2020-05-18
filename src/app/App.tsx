@@ -3,7 +3,7 @@ import Container from '@material-ui/core/Container';
 import React, { FunctionComponent } from 'react';
 import { Route, Switch } from 'react-router-dom';
 
-import Admin from './Admin';
+import Admin from './admin/Admin';
 import Intro from './Intro';
 import Navbar from './Navbar';
 import Skill from './Skill';
@@ -16,7 +16,9 @@ const App: FunctionComponent = () => {
                 <Container>
                     <Switch>
                         <Route path="/lol">
-                            <Admin />
+                            <Box pt={8}>
+                                <Admin />
+                            </Box>
                         </Route>
                         <Route path="/">
                             <Intro />
