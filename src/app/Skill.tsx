@@ -1,10 +1,11 @@
 import { useQuery } from '@apollo/react-hooks';
-import { createStyles, Typography } from '@material-ui/core';
+import { createStyles } from '@material-ui/core';
 import Box from '@material-ui/core/Box';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
-import makeStyles from '@material-ui/core/styles/makeStyles';
+import { makeStyles } from '@material-ui/core/styles';
+import Typography from '@material-ui/core/Typography';
 import Skeleton from '@material-ui/lab/Skeleton';
 import { gql } from 'apollo-boost';
 import React, { FunctionComponent } from 'react';

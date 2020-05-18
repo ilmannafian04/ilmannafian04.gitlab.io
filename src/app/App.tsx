@@ -1,10 +1,10 @@
-import React, { FunctionComponent } from 'react';
+import Box from '@material-ui/core/Box';
 import Container from '@material-ui/core/Container';
+import React, { FunctionComponent } from 'react';
 
 import Intro from './Intro';
 import Navbar from './Navbar';
 import Skill from './Skill';
-import { Box } from '@material-ui/core';
 
 const App: FunctionComponent = () => {
     return (

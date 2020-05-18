@@ -1,8 +1,8 @@
-import React, { FunctionComponent, useEffect, useState } from 'react';
 import { createStyles } from '@material-ui/core';
 import Box from '@material-ui/core/Box';
-import makeStyles from '@material-ui/core/styles/makeStyles';
+import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
+import React, { FunctionComponent, useEffect, useState } from 'react';
 
 // noinspection JSUnusedGlobalSymbols
 const useStyles = makeStyles(() =>
