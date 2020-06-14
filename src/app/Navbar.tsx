@@ -8,10 +8,10 @@ import useScrollTrigger from '@material-ui/core/useScrollTrigger';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import Discord from 'mdi-material-ui/Discord';
-import Dog from 'mdi-material-ui/Dog';
 import Gitlab from 'mdi-material-ui/Gitlab';
 import Steam from 'mdi-material-ui/Steam';
 import React, { FunctionComponent, MutableRefObject, ReactElement, useRef, useState } from 'react';
+import { Twemoji } from 'react-emoji-render';
 
 interface HideOnScrollProps {
     children: ReactElement;
@@ -31,6 +31,9 @@ const useStyles = makeStyles((theme: Theme) =>
         },
         typography: {
             padding: theme.spacing(2),
+        },
+        emojiSize: {
+            fontSize: 30,
         },
     }),
 );
@@ -72,7 +75,7 @@ const Navbar: FunctionComponent = () => {
         <HideOnScroll>
             <AppBar className={classes.navbarBackground}>
                 <Toolbar>
-                    <Dog fontSize="large" />
+                    <Twemoji text=":wolf:" onlyEmojiClassName={classes.emojiSize} />
                     <div className={classes.grow} />
                     <IconButton className={classes.navIcon} href="https://gitlab.com/ilmannafian04" target="_blank">
                         <Gitlab />
