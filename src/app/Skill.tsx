@@ -112,9 +112,11 @@ const Skill: FunctionComponent = () => {
                                     {category.charAt(0).toUpperCase() + category.slice(1)}
                                 </Typography>
                             </Box>
-                            <List>
-                                <SkillSection category={category} loading={loading} skillsData={data} />
-                            </List>
+                            <Box pl={3}>
+                                <List>
+                                    <SkillSection category={category} loading={loading} skillsData={data} />
+                                </List>
+                            </Box>
                         </Box>
                     );
                 })}
