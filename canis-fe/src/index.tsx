@@ -23,13 +23,13 @@ const theme = createMuiTheme({
 const client = new ApolloClient({
     uri: 'https://ilmannafian04.herokuapp.com/graphql',
     request: (operation) => {
-        const token = window.sessionStorage.getItem('yep')
+        const token = window.sessionStorage.getItem('yep');
         operation.setContext({
             headers: {
-                authorization: token ? `Bearer ${token}` : ''
-            }
-        })
-    }
+                authorization: token ? `Bearer ${token}` : '',
+            },
+        });
+    },
 });
 
 ReactDOM.render(
